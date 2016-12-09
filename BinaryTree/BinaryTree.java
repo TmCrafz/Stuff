@@ -12,8 +12,9 @@ public class BinaryTree {
         }
         System.out.println("Height: " + binaryTree.getHeight());
         System.out.println("Size: " + binaryTree.calcSize());
-        System.out.println("Smaller Cnt: " + binaryTree.smallerCnt(16));
-        System.out.println("Higher Cnt: " + binaryTree.higherCnt(28));
+        System.out.println("Smaller Cnt: " + binaryTree.smallerCnt(4));
+        System.out.println("Higher Cnt: " + binaryTree.higherCnt(16));
+        System.out.println("Open Intervall Cnt: " + binaryTree.openIntervallCnt(4, 16));
         //System.out.println(binaryTree);
     }
 

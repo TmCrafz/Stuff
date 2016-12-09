@@ -84,6 +84,12 @@ public class Node {
 
         return 0;
     }
+
+    public int openIntervallCnt(int a, int b) {
+        int smaller = smallerCnt(a);
+        int higher = higherCnt(b);
+        return smaller + higher;
+    }
     /*
     private static String nodeToString(Node node, boolean outside) {
         String str = "";
