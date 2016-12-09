@@ -70,6 +70,20 @@ public class Node {
         }
         return 0;
     }
+
+    public int higherCnt(int k) {
+        if (k < this.key) {
+            int leftHigherCnt = nodeLeft != null ? nodeLeft.higherCnt(k) : 0;
+            int rightHigherCnt = nodeRight != null ? nodeRight.size : 0;
+            return leftHigherCnt + rightHigherCnt + 1;
+        }
+        if (k > this.key) {
+            int rightHigherCnt = nodeRight != null ? nodeRight.higherCnt(k) : 0;
+            return rightHigherCnt;
+        }
+
+        return 0;
+    }
     /*
     private static String nodeToString(Node node, boolean outside) {
         String str = "";

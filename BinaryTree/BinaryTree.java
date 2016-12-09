@@ -13,6 +13,7 @@ public class BinaryTree {
         System.out.println("Height: " + binaryTree.getHeight());
         System.out.println("Size: " + binaryTree.calcSize());
         System.out.println("Smaller Cnt: " + binaryTree.smallerCnt(16));
+        System.out.println("Higher Cnt: " + binaryTree.higherCnt(28));
         //System.out.println(binaryTree);
     }
 
