@@ -58,7 +58,18 @@ public class Node {
         return this.size;
     }
 
-
+    public int smallerCnt(int k) {
+        if (k > this.key) {
+            int rightSmallerCnt = nodeRight != null ? nodeRight.smallerCnt(k) : 0;
+            int leftSmallerCnt = nodeLeft != null ? nodeLeft.size : 0;
+            return leftSmallerCnt + rightSmallerCnt + 1;
+        }
+        if (k < this.key) {
+            int leftSmallerCnt = nodeLeft != null ? nodeLeft.smallerCnt(k) : 0;
+            return leftSmallerCnt;
+        }
+        return 0;
+    }
     /*
     private static String nodeToString(Node node, boolean outside) {
         String str = "";
