@@ -11,7 +11,8 @@ public class BinaryTree {
             binaryTree.insert(keys[i]);
         }
         System.out.println("Height: " + binaryTree.getHeight());
-
+        System.out.println("Size: " + binaryTree.calcSize());
+        //System.out.println(binaryTree);
     }
 
 }

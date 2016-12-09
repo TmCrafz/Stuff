@@ -45,5 +45,49 @@ public class Node {
         return Math.max(lengthLeft, lengthRight);
     }
 
+    public int calcSize() {
+        int left = 0;
+        int right = 0;
+        if (nodeLeft != null) {
+            left = nodeLeft.calcSize();
+        }
+        if (nodeRight != null) {
+            right = nodeRight.calcSize();
+        }
+        this.size = left + right + 1;
+        return this.size;
+    }
+
+
+    /*
+    private static String nodeToString(Node node, boolean outside) {
+        String str = "";
+        int leaves = 0;
+        // The count of how much Digits we assume the keys have
+        int maxDigitNum = 4;
+        int keyPos = ((leaves * maxDigitNum + leaves) / 2 ) - (maxDigitNum / 2);
+        if (node == null) {
+            return "";
+
+        }
+        leaves = (int) Math.pow(2, node.getHeight());
+        for (int i = 0; i < keyPos; i++) {
+            str += " ";
+        }
+        str += node.key;
+        if (outside) {
+            str += "\n";
+        }
+        str += nodeToString(node.nodeLeft, false);
+        str += nodeToString(node.nodeRight, outside);
+        return str;
+
+    }
+
+    @Override
+    public String toString() {
+        return nodeToString(this, true);
+    }
+    */
 
 }
