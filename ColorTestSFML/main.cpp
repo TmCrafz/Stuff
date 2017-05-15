@@ -47,7 +47,8 @@ int changeColorVal(int val, bool &isIncreasing)
 	return val;
 }
 
-// Use color interpolation to get the current color when changing from color a to color b of t
+// Use color interpolation to get the current color when changing from color a to color b.
+// t has to be between 0 and 1
 sf::Color lerbRGB(sf::Color a, sf::Color b, float t)
 {
 	return sf::Color(
@@ -96,6 +97,7 @@ int main()
 		if (colorChangeTimeLast > 0.01f)
 		{
 			curCol = lerbRGB(sf::Color::Red, sf::Color::Green, totalRuntime);
+			curCol = lerbRGB(sf::Color::Red, sf::Color::Green, 0);
 			/*
 			r = changeColorVal(r, r_isIncreasing);
 			g = changeColorVal(g, g_isIncreasing);
